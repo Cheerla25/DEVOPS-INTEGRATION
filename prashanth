@@ -1,1 +1,17 @@
-hi
+pipelin{
+    agent any
+    stages{
+        stage("clone the code"){
+            steps{
+                git branch: 'main', url: 'https://github.com/Cheerla25/spring-petclinic-test.git'
+            }
+        }
+        stage("build the code"){
+            steps{
+                sh 'mvn clean install'
+                 
+            }
+
+        }
+    }
+}
