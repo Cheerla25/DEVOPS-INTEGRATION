@@ -1,5 +1,5 @@
 FROM ubuntu:2.0
 RUN sudo apt update && sudo apt install openjdk-17-jdk && sudo apt install maven && sudo apt install wget
-RUN wget https://github.com/Cheerla25/sonarqube.git && mvn clean install
+RUN wget https://github.com/Cheerla25/spring-petclinic-test.git && mvn clean install
 EXPOSE 8080
-CMD ["java","-jar","/target/*.jar"]dd
+CMD ["java","-jar","/target/*.jar"]
