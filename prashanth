@@ -1,4 +1,4 @@
-pipelin{
+pipeline{
     agent any
     stages{
         stage("clone the code"){
@@ -9,9 +9,29 @@ pipelin{
         stage("build the code"){
             steps{
                 sh 'mvn clean install'
+
                  
             }
 
         }
+        stage("artifactory"){
+           steps{ archiveArtifacts artifacts: '/target/*.jar', followSymlinks: false
+        }
+        }
+        stage("junit"){
+            steps{
+                junit '**/surefire-reports/*.xml'
+            }
+        }
+        stage('build && SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('sonar-qube') {
+                    // Optionally use a Maven environment you've configured already
+                        sh 'mvn clean package sonar:sonar'
+                    
+                }
+            }
+        }
+        s
     }
 }
