@@ -16,7 +16,7 @@ metadata:
           name: prash
           spec:
           containers:
-            - image: nginx
+            image: nginx
             name: prash
             
   
