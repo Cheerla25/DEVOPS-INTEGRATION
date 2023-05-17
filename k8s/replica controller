@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: prash
+  labels:
+    app: nginx
+    spec:
+    minReadySeconds: 5sec
+    replicas: 5
+    selector:
+      app: nginx
+      template:
+      metadata:
+        labels:
+          app: nginx
+          name: prash
+          spec:
+          containers:
+            - name: prash3
+            image: nginx
+            ports:
+              - containerPort: 8080
+              protocol:TCP
