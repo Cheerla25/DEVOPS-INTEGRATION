@@ -16,8 +16,10 @@ metadata:
           name: prash
           spec:
           containers:
-            - name: prash3
-            image: nginx
+            - image: nginx
+            name: prash
+            
+  
             ports:
               - containerPort: 8080
-              protocol:TCP
+              protocol: TCP
