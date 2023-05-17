@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: pod
+metadata:
+  name: prash
+  labels:
+    app: jenkins
+    spec:
+      containers:
+        - name: prash1
+        image: jenkins
+        ports:
+          - containerPort: 8080
+          protocol: TCP

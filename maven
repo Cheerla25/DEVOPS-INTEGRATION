@@ -1,0 +1,9 @@
+pipeline{
+    stages{
+        stage("project build"){
+            steps{
+                sh 'clean install'
+            }
+        }
+    }
+}
