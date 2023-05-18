@@ -16,8 +16,8 @@ spec:
       name: prash
     spec:
       containers:
-        - image: nginx
+        - image: jenkins
           name: prash1
           ports:
-            - containerPort: 80
+            - containerPort: 8080
               protocol: TCP    
