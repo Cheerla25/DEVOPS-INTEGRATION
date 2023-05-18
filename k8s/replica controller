@@ -4,8 +4,8 @@ metadata:
   name: prash
   labels:
     app: nginx
-    spec:
-    minReadySeconds: 5sec
+spec:
+  minReadySeconds: 5sec
     replicas: 5
     selector:
       app: nginx
