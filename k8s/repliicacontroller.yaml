@@ -13,11 +13,11 @@ spec:
     metadata:
       labels:
         app: nginx
-      name: prash
+      name: prash1
     spec:
       containers:
         - image: jenkins
-          name: prash1
+          name: prashu
           ports:
             - containerPort: 8080
               protocol: TCP    
