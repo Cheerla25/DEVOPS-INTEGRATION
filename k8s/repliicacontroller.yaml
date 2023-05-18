@@ -5,7 +5,7 @@ metadata:
     app: nginx
   name: prashanth
 spec:
-  minReadySeconds: 15sec
+  minReadySeconds: 15
   replicas: 5
   selector:
     app: nginx
